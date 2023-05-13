@@ -23,28 +23,16 @@ module.exports = {
     lastUpdated: "更新时间",
     logo: "/assets/img/logo.png",
     nav: [
-      { text: "Home", link: "/" },
+      { text: "首页", link: "/" },
       { text: "Guide", link: "/about" },
       {
-        text: "Languages",
+        text: "文章",
         items: [
-          {
-            text: "Group1",
-            items: [
-              { text: "Home", link: "/" },
-              { text: "Guide", link: "/about" },
-            ],
-          },
-          {
-            text: "Group2",
-            items: [
-              { text: "Home", link: "/" },
-              { text: "Guide", link: "/about" },
-            ],
-          },
+          { text: '关于我', link: 'about.md' },
+          { text: '关于我2', link: 'about1.md'}
         ],
       },
-      { text: "External", link: "https://google.com" },
+      { text: "我的GitHub", link: "https://github.com/A-lost-unicorn" },
     ],
     sidebar: ["", "about", "about1"],
   },
