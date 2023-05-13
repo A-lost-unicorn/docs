@@ -1,0 +1,24 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "yyt的创作",
+  "main": "index.js",
+  "scripts": {
+      "docs:dev": "vuepress dev docs",
+      "docs:build": "vuepress build docs"
+    },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A-lost-unicorn/docs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/A-lost-unicorn/docs/issues"
+  },
+  "homepage": "https://github.com/A-lost-unicorn/docs#readme",
+  "dependencies": {
+    "vue-template-compiler": "^2.7.14"
+  }
+}
