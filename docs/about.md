@@ -1,5 +1,6 @@
 ---
 title: 关于我
+sidebar: auto
 ---
 <!--YAML要注意空格！！  -->
 ## 关于我

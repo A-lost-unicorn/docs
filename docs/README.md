@@ -2,7 +2,7 @@
 home: true
 # heroImage: /hero.png
 actionText: 别点我 →
-actionLink: /zh/guide/
+actionLink: /about/
 features:
 - title: 笔记✏︎
   details: 记录学习上的笔记📓

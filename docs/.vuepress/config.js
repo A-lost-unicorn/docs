@@ -24,16 +24,9 @@ module.exports = {
     logo: "/assets/img/logo.png",
     nav: [
       { text: "首页", link: "/" },
-      { text: "Guide", link: "/about" },
-      {
-        text: "文章",
-        items: [
-          { text: '关于我', link: 'about.md' },
-          { text: '关于我2', link: 'about1.md'}
-        ],
-      },
+      { text: "算法", link: "/data_structure/" },
+      { text: '关于我', link: '/about.md' },
       { text: "我的GitHub", link: "https://github.com/A-lost-unicorn" },
-    ],
-    sidebar: ["", "about", "about1"],
+    ]
   },
 };
