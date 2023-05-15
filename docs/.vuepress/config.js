@@ -26,7 +26,7 @@ module.exports = {
       { text: "首页", link: "/" },
       { text: "算法", link: "/data_structure/" },
       { text: '关于我', link: '/about.md' },
-      { text: "我的GitHub", link: "https://github.com/A-lost-unicorn" },
+      { text: "GitHub", link: "https://github.com/" },
     ]
   },
 };
