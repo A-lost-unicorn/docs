@@ -22,5 +22,8 @@
   "dependencies": {
     "moment": "^2.29.4",
     "vue-template-compiler": "^2.7.14"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-pwa": "^1.9.9"
   }
 }
