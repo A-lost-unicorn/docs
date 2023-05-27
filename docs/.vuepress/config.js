@@ -31,11 +31,12 @@ module.exports = {
       {
         serviceWorker: true,
         updatePopup: {
-          message: "发现新内容可用",
+          message: "发现有新内容",
           buttonText: "刷新",
         },
       },
     ],
+    ['@vuepress/back-to-top']
   ],
   themeConfig: {
     lastUpdated: "更新时间",
@@ -43,6 +44,7 @@ module.exports = {
     nav: [
       { text: "首页", link: "/" },
       { text: "算法", link: "/data_structure/" },
+      { text: "劝学", link: "/quan.md" },
       { text: "关于我", link: "/about.md" },
       { text: "GitHub", link: "https://github.com/" },
     ],
