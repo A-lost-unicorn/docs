@@ -36,7 +36,12 @@ module.exports = {
         },
       },
     ],
-    ['@vuepress/back-to-top']
+    ['@vuepress/back-to-top'],
+    // [ '@vuepress/google-analytics',
+    // {
+    //   'ga': '378835474' // UA-00000000-0
+    // }
+    // ]
   ],
   themeConfig: {
     lastUpdated: "更新时间",
