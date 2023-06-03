@@ -21,9 +21,14 @@ module.exports=  [
       },
     ],
     ['@vuepress/back-to-top'],
-    // [ '@vuepress/google-analytics',
-    // {
-    //   'ga': '378835474' // UA-00000000-0
-    // }
-    // ]
+    [ '@vuepress/google-analytics',
+    {
+      'ga': 'UA-269980562-1' // UA-00000000-0
+    }
+    ],
+    ['@vuepress/medium-zoom',
+     {
+      selector: 'img.custom',
+    }
+  ]
   ]
