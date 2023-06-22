@@ -14,3 +14,4 @@ sidebar: auto
 
 
 >编者碎碎念：此网页用于测试，新内容即将上线！
+<Vssue :options="{ locale: 'zh' }" />

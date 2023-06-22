@@ -30,5 +30,17 @@ module.exports=  [
      {
       selector: 'img.custom',
     }
-  ]
-  ]
+  ],[
+  '@vssue/vuepress-plugin-vssue', {
+    // 设置 `platform` 而不是 `api`
+    platform: 'github-v4',
+
+    // 其他的 Vssue 配置
+    owner: 'A-lost-unicorn',
+    repo: 'docs',
+    clientId: '42c134efccf7eab66abc',
+    clientSecret: 'e13fd05e5d069b741ddd03c02fd28abb5c02c1cb',
+    autoCreateIssue: true
+  },
+]
+]

@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/A-lost-unicorn/docs#readme",
   "dependencies": {
+    "@vssue/api-github-v4": "^1.4.7",
+    "@vssue/vuepress-plugin-vssue": "^1.4.8",
     "moment": "^2.29.4",
     "vue-template-compiler": "^2.7.14"
   },
