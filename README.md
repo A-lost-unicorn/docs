@@ -1,3 +1,3 @@
 # Hello Vuepress!
 
-[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+https://visitor-badge.glitch.me/badge?page_id=1
