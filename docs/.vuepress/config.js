@@ -13,5 +13,24 @@ module.exports = {
     lastUpdated: "更新时间",
     logo: "/assets/img/logo.png",
     nav: navConf,
+    sidebar:[
+      '/data_structure/',
+      {
+      // '/data_structure/': [
+      //   '',  /*data_structure*/
+      //   ['day1',''] /*data_structure/day1.html*/
+      // ]
+      title:'数组',
+      path:'/data_structure/Array/',
+      collapsable: false, // 可选的, 默认值是 true,
+        sidebarDepth: 1,    // 可选的, 默认值是 1
+        children: [
+          '/data_structure/Array/binarySearch'
+        ]
   },
+]
+  },
+  markdown: {
+    lineNumbers: true
+  }
 };
