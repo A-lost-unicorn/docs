@@ -1,16 +1,14 @@
 <template>
     <div>
         <ClientOnly>
-            <kinesis-container :audio="audio" :playAudio="true">
-              <kinesis-audio 
-                :audioIndex="10">
-                  <kinesis-element 
-                    :strength="10" 
-                    type="depth">
-                  ...
-                </kinesis-element>
-                </kinesis-audio>
-              ...
+          <kinesis-container>
+              Here, you can put
+              <kinesis-element :strength="20">
+                whatever
+              </kinesis-element>
+              <kinesis-element :strength="50">
+                content!
+              </kinesis-element>
           </kinesis-container>
             
         </ClientOnly>

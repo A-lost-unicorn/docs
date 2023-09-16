@@ -10,6 +10,8 @@ sidebar: auto
 感谢您访问我的网站🥰
 
 
+<Kinesis/>
+
 
 
 <Vssue :options="{ locale: 'zh' }" />

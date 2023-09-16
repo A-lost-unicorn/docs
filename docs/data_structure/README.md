@@ -2,8 +2,11 @@
 title: 算法
 ---
 
-## 前言
-记录学习算法时遇到的困惑和解决方法
+### 前言
+循序渐进学算法🤓🤓
+::: tip 特别感谢
+感谢[代码随想录](https://www.programmercarl.com/)路线规划支持❤
+:::
 <!-- 放照片格式  <img :src="$withBase('../imgs/png1.png')" alt="png1"> -->
 # 链表
 ~~~c
