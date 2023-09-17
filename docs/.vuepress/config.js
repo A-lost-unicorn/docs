@@ -25,7 +25,8 @@ module.exports = {
       collapsable: false, // 可选的, 默认值是 true,
         sidebarDepth: 1,    // 可选的, 默认值是 1
         children: [
-          '/data_structure/Array/binarySearch'
+          '/data_structure/Array/binarySearch',
+          '/data_structure/Array/removeElements'
         ]
   },
 ]
