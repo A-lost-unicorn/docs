@@ -12,3 +12,7 @@ features:
   details: 记录生活的点点滴滴🥳🥳
 footer:  Copyright © 2018-present Evan yyt
 ---
+
+::: slot footer
+MIT Licensed | Copyright © 2018-present [Evan You](https://github.com/yyx990803)
+:::

@@ -26,7 +26,8 @@ module.exports = {
         sidebarDepth: 1,    // 可选的, 默认值是 1
         children: [
           '/data_structure/Array/binarySearch',
-          '/data_structure/Array/removeElements'
+          '/data_structure/Array/removeElements',
+          '/data_structure/Array/squareOfOrderedArray'
         ]
   },
 ]
