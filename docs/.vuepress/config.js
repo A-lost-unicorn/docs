@@ -10,6 +10,7 @@ module.exports = {
   head: headConf,
   plugins:pluginsConf,
   themeConfig: {
+    smoothScroll: true,
     lastUpdated: "更新时间",
     logo: "/assets/img/logo.png",
     nav: navConf,
@@ -27,7 +28,8 @@ module.exports = {
         children: [
           '/data_structure/Array/binarySearch',
           '/data_structure/Array/removeElements',
-          '/data_structure/Array/squareOfOrderedArray'
+          '/data_structure/Array/squareOfOrderedArray',
+          '/data_structure/Array/theSmallestSubarray'
         ]
   },
 ]
