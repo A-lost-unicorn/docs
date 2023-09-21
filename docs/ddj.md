@@ -2,7 +2,7 @@
 title: 道德经
 sidebar: auto
 ---
-《道德经》译文从[古诗文网](https://www.gushiwen.cn/)爬取  
+《道德经》取自[古诗文网](https://www.gushiwen.cn/)  
 感谢[soladuor](https://github.com/soladuor)提供技术帮助  
 ## 道经
 ### 道经 第一章

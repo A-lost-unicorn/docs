@@ -29,7 +29,8 @@ module.exports = {
           '/data_structure/Array/binarySearch',
           '/data_structure/Array/removeElements',
           '/data_structure/Array/squareOfOrderedArray',
-          '/data_structure/Array/theSmallestSubarray'
+          '/data_structure/Array/theSmallestSubarray',
+          '/data_structure/Array/spiralMatrix2'
         ]
   },
 ]
