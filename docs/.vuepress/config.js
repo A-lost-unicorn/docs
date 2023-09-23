@@ -39,6 +39,7 @@ module.exports = {
         sidebarDepth: 1, // 可选的, 默认值是 1
         children: [
           "/data_structure/linkedList/removeListElement",
+          "/data_structure/linkedList/designList",
           
         ],
       },
