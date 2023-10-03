@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>707.设计链表 | a lost unicorn</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/docs/favicon.ico">
+    <link rel="manifest" href="/docs/manifest.json">
+    <link rel="apple-touch-icon" href="imagesiconsicon-152x152.png">
+    <link rel="mask-icon" href="imagesiconsicon-152x152.png" color="#3eaf7c">
+    <meta name="description" content="🦄">
+    <meta name="author" content="a lost unicorn">
+    <meta name="keywords" content="a lost unicorn,vuepress">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="imagesiconsicon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/docs/assets/css/0.styles.10e8fe2f.css" as="style"><link rel="preload" href="/docs/assets/js/app.319f75b3.js" as="script"><link rel="preload" href="/docs/assets/js/3.14e12f0f.js" as="script"><link rel="preload" href="/docs/assets/js/22.51583d3e.js" as="script"><link rel="preload" href="/docs/assets/js/4.0929fce7.js" as="script"><link rel="prefetch" href="/docs/assets/js/1.b40aa769.js"><link rel="prefetch" href="/docs/assets/js/10.ad1761c7.js"><link rel="prefetch" href="/docs/assets/js/11.f9754387.js"><link rel="prefetch" href="/docs/assets/js/12.b6bdd4ca.js"><link rel="prefetch" href="/docs/assets/js/13.a8181848.js"><link rel="prefetch" href="/docs/assets/js/14.0aa645c0.js"><link rel="prefetch" href="/docs/assets/js/15.db6ed4ed.js"><link rel="prefetch" href="/docs/assets/js/16.935be6b2.js"><link rel="prefetch" href="/docs/assets/js/17.57d08518.js"><link rel="prefetch" href="/docs/assets/js/18.af6b7218.js"><link rel="prefetch" href="/docs/assets/js/19.acb6996c.js"><link rel="prefetch" href="/docs/assets/js/20.e1d20337.js"><link rel="prefetch" href="/docs/assets/js/21.a9f3695a.js"><link rel="prefetch" href="/docs/assets/js/23.a2bc8acb.js"><link rel="prefetch" href="/docs/assets/js/24.1171a85b.js"><link rel="prefetch" href="/docs/assets/js/25.b117fece.js"><link rel="prefetch" href="/docs/assets/js/26.a001b7e2.js"><link rel="prefetch" href="/docs/assets/js/27.572953de.js"><link rel="prefetch" href="/docs/assets/js/28.b5b08ffc.js"><link rel="prefetch" href="/docs/assets/js/29.8ac27610.js"><link rel="prefetch" href="/docs/assets/js/30.faa0ca36.js"><link rel="prefetch" href="/docs/assets/js/5.81ea622c.js"><link rel="prefetch" href="/docs/assets/js/6.9a81f7e0.js"><link rel="prefetch" href="/docs/assets/js/7.fd2d8fee.js"><link rel="prefetch" href="/docs/assets/js/8.a1a31e4c.js"><link rel="prefetch" href="/docs/assets/js/9.507b0d64.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.10e8fe2f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><img src="/docs/assets/img/logo.png" alt="a lost unicorn" class="logo"> <span class="site-name can-hide">a lost unicorn</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/docs/data_structure/" class="nav-link router-link-active">
+  算法
+</a></div><div class="nav-item"><a href="/docs/ddj.html" class="nav-link">
+  道德经
+</a></div><div class="nav-item"><a href="/docs/about.html" class="nav-link">
+  关于我
+</a></div><div class="nav-item"><a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/docs/data_structure/" class="nav-link router-link-active">
+  算法
+</a></div><div class="nav-item"><a href="/docs/ddj.html" class="nav-link">
+  道德经
+</a></div><div class="nav-item"><a href="/docs/about.html" class="nav-link">
+  关于我
+</a></div><div class="nav-item"><a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/docs/data_structure/" aria-current="page" class="sidebar-link">算法</a></li><li><section class="sidebar-group depth-0"><a href="/docs/data_structure/Array/" class="sidebar-heading clickable"><span>数组</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/data_structure/Array/binarySearch.html" class="sidebar-link">704. 二分查找</a></li><li><a href="/docs/data_structure/Array/removeElements.html" class="sidebar-link">27. 移除元素</a></li><li><a href="/docs/data_structure/Array/squareOfOrderedArray.html" class="sidebar-link">977. 有序数组的平方</a></li><li><a href="/docs/data_structure/Array/theSmallestSubarray.html" class="sidebar-link">209. 长度最小的子数组</a></li><li><a href="/docs/data_structure/Array/spiralMatrix2.html" class="sidebar-link">59. 螺旋矩阵 II</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/docs/data_structure/linkedList/" class="sidebar-heading clickable router-link-active open"><span>链表</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/data_structure/linkedList/removeListElement.html" class="sidebar-link">203.移除链表元素</a></li><li><a href="/docs/data_structure/linkedList/designList.html" aria-current="page" class="active sidebar-link">707.设计链表</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/data_structure/linkedList/designList.html#思路" class="sidebar-link">思路</a></li><li class="sidebar-sub-header"><a href="/docs/data_structure/linkedList/designList.html#java代码" class="sidebar-link">java代码：</a></li></ul></li><li><a href="/docs/data_structure/linkedList/reverseLinkedList.html" class="sidebar-link">206.反转链表</a></li><li><a href="/docs/data_structure/linkedList/swapNodesInPairs.html" class="sidebar-link">24. 两两交换链表中的节点</a></li><li><a href="/docs/data_structure/linkedList/removeNthNodeFromEndOfList.html" class="sidebar-link">19.删除链表的倒数第N个节点</a></li><li><a href="/docs/data_structure/linkedList/linkedListIntersection.html" class="sidebar-link">面试题 02.07. 链表相交</a></li><li><a href="/docs/data_structure/linkedList/linkedListCycleII.html" class="sidebar-link">142. 环形链表 II</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/docs/data_structure/binaryTree" class="sidebar-heading clickable"><span>二叉树</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/data_structure/binaryTree/maximumDepthOfBinaryTree.html" class="sidebar-link">104. 二叉树的最大深度</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p></p><div class="table-of-contents"><ul><li><a href="#思路">思路</a><ul><li><a href="#获取第index个节点">获取第index个节点</a></li><li><a href="#插入和删除">插入和删除</a></li></ul></li><li><a href="#java代码">java代码：</a></li></ul></div><p></p> <h1 id="_707-设计链表"><a href="#_707-设计链表" class="header-anchor">#</a> 707.设计链表</h1> <p><a href="https://leetcode.cn/problems/design-linked-list/description/" target="_blank" rel="noopener noreferrer">力扣链接<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>你可以选择使用单链表或者双链表，设计并实现自己的链表。<br>
+单链表中的节点应该具备两个属性：<code>val</code> 和 <code>next</code> 。<code>val</code> 是当前节点的值，<code>next</code> 是指向下一个节点的指针/引用。<br>
+如果是双向链表，则还需要属性 <code>prev</code> 以指示链表中的上一个节点。假设链表中的所有节点下标从<code>0</code>开始。</p> <p>实现 <code>MyLinkedList</code> 类：</p> <ul><li><code>MyLinkedList()</code> 初始化 <code>MyLinkedList</code> 对象。</li> <li><code>int get(int index)</code> 获取链表中下标为 index 的节点的值。如果下标无效，则返回 <code>-1</code> 。</li> <li><code>void addAtHead(int val)</code> 将一个值为 <code>val</code> 的节点插入到链表中第一个元素之前。在插入完成后，新节点会成为链表的第一个节点。</li> <li><code>void addAtTail(int val)</code> 将一个值为 <code>val</code> 的节点追加到链表中作为链表的最后一个元素。</li> <li><code>void addAtIndex(int index, int val)</code> 将一个值为 <code>val</code> 的节点插入到链表中下标为 <code>index</code> 的节点之前。如果 <code>index</code> 等于链表的长度，那么该节点会被追加到链表的末尾。如果 <code>index</code> 比长度更大，该节点将 不会插入到链表中。</li> <li><code>void deleteAtIndex(int index)</code> 如果下标有效，则删除链表中下标为 <code>index</code> 的节点。</li></ul> <blockquote><p><strong>输入</strong><br>
+[&quot;MyLinkedList&quot;, &quot;addAtHead&quot;, &quot;addAtTail&quot;, &quot;addAtIndex&quot;, &quot;get&quot;, &quot;deleteAtIndex&quot;, &quot;get&quot;]<br>
+[[], [1], [3], [1, 2], [1], [1], [1]]<br> <strong>输出</strong><br>
+[null, null, null, null, 2, null, 3]<br> <strong>解释</strong><br>
+MyLinkedList myLinkedList = new MyLinkedList();
+myLinkedList.addAtHead(1);
+myLinkedList.addAtTail(3);
+myLinkedList.addAtIndex(1, 2);    // 链表变为 1-&gt;2-&gt;3
+myLinkedList.get(1);              // 返回 2
+myLinkedList.deleteAtIndex(1);    // 现在，链表变为 1-&gt;3
+myLinkedList.get(1);              // 返回 3</p></blockquote> <h2 id="思路"><a href="#思路" class="header-anchor">#</a> 思路</h2> <p>这道题目设计链表的五个接口：</p> <ul><li>获取链表第index个节点的数值</li> <li>在链表的最前面插入一个节点</li> <li>在链表的最后面插入一个节点</li> <li>在链表第index个节点前面插入一个节点</li> <li>删除链表的第index个节点</li></ul> <h3 id="获取第index个节点"><a href="#获取第index个节点" class="header-anchor">#</a> 获取第index个节点</h3> <p>在get函数中，cur需要定位到第n个，故</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code> <span class="token class-name">ListNode</span> cur <span class="token operator">=</span> dummy<span class="token punctuation">.</span>next<span class="token punctuation">;</span><span class="token comment">//注意这个的赋值与下面不同</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>index <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            cur <span class="token operator">=</span> cur<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+            index<span class="token operator">--</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="插入和删除"><a href="#插入和删除" class="header-anchor">#</a> 插入和删除</h3> <p>在add或delete中，cur需要定位到第n个的<strong>前一个</strong>，故</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>   <span class="token class-name">ListNode</span> cur <span class="token operator">=</span> dummy<span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>index <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            cur <span class="token operator">=</span> cur<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+            index<span class="token operator">--</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h4 id="插入"><a href="#插入" class="header-anchor">#</a> 插入</h4> <p>链表中插入节点</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code> <span class="token class-name">ListNode</span> toAdd <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ListNode</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        toAdd<span class="token punctuation">.</span>next <span class="token operator">=</span> cur<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        cur<span class="token punctuation">.</span>next <span class="token operator">=</span> toAdd<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h4 id="删除"><a href="#删除" class="header-anchor">#</a> 删除</h4> <p>链表中删除节点</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>cur<span class="token punctuation">.</span>next <span class="token operator">=</span> cur<span class="token punctuation">.</span>next<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="java代码"><a href="#java代码" class="header-anchor">#</a> java代码：</h2> <p>完整java代码：</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">class</span> <span class="token class-name">MyLinkedList</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> size<span class="token punctuation">;</span>
+    <span class="token class-name">ListNode</span> dummy<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">MyLinkedList</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        size <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        dummy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ListNode</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//设置虚拟节点</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> index <span class="token operator">&gt;=</span> size<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token class-name">ListNode</span> cur <span class="token operator">=</span> dummy<span class="token punctuation">.</span>next<span class="token punctuation">;</span><span class="token comment">//注意这个的赋值与下面不同</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>index <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            cur <span class="token operator">=</span> cur<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+            index<span class="token operator">--</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> cur<span class="token punctuation">.</span>val<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addAtHead</span><span class="token punctuation">(</span><span class="token keyword">int</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">addAtIndex</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addAtTail</span><span class="token punctuation">(</span><span class="token keyword">int</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">addAtIndex</span><span class="token punctuation">(</span>size<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addAtIndex</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">,</span> <span class="token keyword">int</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">&gt;</span> size<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        index <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        size<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token class-name">ListNode</span> cur <span class="token operator">=</span> dummy<span class="token punctuation">;</span><span class="token comment">//注意这个的赋值与上面不同</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>index <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">//模仿C中 ``while(index){}``</span>
+            cur <span class="token operator">=</span> cur<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+            index<span class="token operator">--</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token class-name">ListNode</span> toAdd <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ListNode</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        toAdd<span class="token punctuation">.</span>next <span class="token operator">=</span> cur<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        cur<span class="token punctuation">.</span>next <span class="token operator">=</span> toAdd<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">deleteAtIndex</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> index <span class="token operator">&gt;=</span> size<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        size<span class="token operator">--</span><span class="token punctuation">;</span>
+        <span class="token class-name">ListNode</span> cur <span class="token operator">=</span> dummy<span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>index <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            cur <span class="token operator">=</span> cur<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+            index<span class="token operator">--</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        cur<span class="token punctuation">.</span>next <span class="token operator">=</span> cur<span class="token punctuation">.</span>next<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">ListNode</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> val<span class="token punctuation">;</span>
+    <span class="token class-name">ListNode</span> next<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">ListNode</span><span class="token punctuation">(</span><span class="token keyword">int</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>val <span class="token operator">=</span> val<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">2023年9月23日</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/data_structure/linkedList/removeListElement.html" class="prev">
+        203.移除链表元素
+      </a></span> <span class="next"><a href="/docs/data_structure/linkedList/reverseLinkedList.html">
+        206.反转链表
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/docs/assets/js/app.319f75b3.js" defer></script><script src="/docs/assets/js/3.14e12f0f.js" defer></script><script src="/docs/assets/js/22.51583d3e.js" defer></script><script src="/docs/assets/js/4.0929fce7.js" defer></script>
+  </body>
+</html>
